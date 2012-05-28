@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>IDisposable Implementation</Title>
+      <Shortcut>idsp</Shortcut>
+      <Description>Code snippet for implementing the IDisposable interface</Description>
+      <Author>Casey Gum</Author>
+      <SnippetTypes>
+	<SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+	  <ID>classname</ID>
+	  <ToolTip>Class name</ToolTip>
+	  <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[#region IDisposable
+	// Track whether Dispose has been called
+	private bool disposed = false;
+
+/// <summary>
+/// Disposes the object
+/// </summary>
+public void Dispose() {
+	Dispose(true);
+	GC.SuppressFinalize(this);
+}
+
+private void Dispose(bool disposing) {
+	if (disposed) return;
+	
+	if (disposing) {
+		// dispose managed resources
+		// resource.Dispose();
+	}
+
+	disposed = true;
+}
+
+/// <summary>
+/// Disposes the object
+/// </summary>
+~$classname$ () {
+	Dispose(false);
+}
+#endregion
+	]]>
+
+      </Code>
+    </Snippet>
+
+  </CodeSnippet>
+</CodeSnippets>

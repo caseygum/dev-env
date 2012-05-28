@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Test Fixture</Title>
+			<Shortcut>tf</Shortcut>
+			<Description>Generates an NUnit test fixture</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>className</ID>
+					<ToolTip>The name of the test class</ToolTip>
+					<Default>NewTestFixture</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[TestFixture]]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Fixture Set Up</Title>
+			<Shortcut>nufsu</Shortcut>
+			<Description>Generates an NUnit fixture set up method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the fixture set up method</ToolTip>
+					<Default>FixtureSetUp</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[TestFixtureSetUp]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Test Fixture Tear Down</Title>
+			<Shortcut>nuftd</Shortcut>
+			<Description>Generates an NUnit test fixture tear down method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the fixture tear down method</ToolTip>
+					<Default>FixtureTearDown</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[TestFixtureTearDown]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Set Up</Title>
+			<Shortcut>nusu</Shortcut>
+			<Description>Generates an NUnit set up method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the set up method</ToolTip>
+					<Default>SetUp</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[SetUp]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Tear Down</Title>
+			<Shortcut>nutd</Shortcut>
+			<Description>Generates an NUnit tear down method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the tear down method</ToolTip>
+					<Default>TearDown</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[TearDown]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Test</Title>
+			<Shortcut>nut</Shortcut>
+			<Description>Generates an NUnit test method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the test method</ToolTip>
+					<Default>NewTest</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[Test]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>NUnit Test with Exception</Title>
+			<Shortcut>nutex</Shortcut>
+			<Description>Generates an NUnit test method that expects an exception</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+					<ID>exceptionType</ID>
+					<ToolTip>The type of exception to expect</ToolTip>
+					<Default>ArgumentNullException</Default>
+				</Literal>
+				<Literal>
+					<ID>methodName</ID>
+					<ToolTip>The name of the test method</ToolTip>
+					<Default>NewTest</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[Test, ExpectedException(typeof($exceptionType$))]
+	public void $methodName$()
+	{
+		$selected$$end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Create object under test</Title>
+			<Shortcut>cout</Shortcut>
+			<Description>Creates an object for testing purposes</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+					<ID>type</ID>
+					<ToolTip>The type of object to create</ToolTip>
+					<Default>type</Default>
+				</Literal>
+				<Literal>
+					<ID>creation</ID>
+					<ToolTip>The name of the test method</ToolTip>
+					<Default>null</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private $type$ CreateObjectUnderTest()
+  {
+    return $creation$$end$;
+  }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Get object under test</Title>
+			<Shortcut>gout</Shortcut>
+			<Description>Gets the object returned from the CreateObjectUnderTest method</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+					<ID>type</ID>
+					<ToolTip>The type of object to get</ToolTip>
+					<Default>var</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>The name of the variable </ToolTip>
+					<Default>obj</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$type$ $name$ = CreateObjectUnderTest();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>New Guid string</Title>
+			<Shortcut>guids</Shortcut>
+			<Description>Creates a new Guid string</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+					<ID>var</ID>
+					<Default>id</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[string $var$ = Guid.NewGuid().ToString();$end$]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

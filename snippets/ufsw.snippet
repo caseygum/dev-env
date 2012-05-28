@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Using FileStream for Write</Title>
+			<Shortcut>ufsw</Shortcut>
+			<Description>Code snippet create a using(FileStream...) block to write a file</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>path</ID>
+					<ToolTip>The path to the file to write</ToolTip>
+					<Default>path</Default>
+				</Literal>
+
+			</Declarations>
+			<Code Language="csharp"><![CDATA[using(FileStream fs = new FileStream($path$, FileMode.Create, FileAccess.Write))
+	{
+		$selected$ $end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

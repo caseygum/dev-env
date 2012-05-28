@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>IDB Data Driver Update</Title>
+			<Shortcut>idbupvdt</Shortcut>
+			<Description>Code snippet for an individual column insert command for a Variable Date Time</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>model</ID>
+					<ToolTip>The model object instance that contains the property to update</ToolTip>
+					<Default>x</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>The property on the model object that we are updating</ToolTip>
+					<Default>DateProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>colName</ID>
+					<ToolTip>Name of the column in the database that we are updating</ToolTip>
+					<Default>COLUMN_NAME</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if (null == $model$.$property$ && !row.Is$colName$Null()) row.Set$colName$Null();
+                else if (null != $model$.$property$ && ((row.Is$colName$Null() || $model$.$property$.ToString() != row.$colName$))) row.$colName$ = $model$.$property$.ToString();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

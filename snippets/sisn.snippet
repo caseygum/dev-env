@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>String Is Null</Title>
+			<Shortcut>sisn</Shortcut>
+			<Description>Code snippet to check for null or empty of a string</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>var</ID>
+					<ToolTip>The variable that you want to check for null or empty</ToolTip>
+					<Default>var</Default>
+				</Literal>
+
+			</Declarations>
+			<Code Language="csharp"><![CDATA[if (string.IsNullOrEmpty($var$))
+	{
+		$selected$ $end$
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Dependency Property</Title>
+            <Shortcut>makedp</Shortcut>
+            <Description>Code snippet to create a new DependencyProperty</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+                <SnippetType>SurroundsWith</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>propertyName</ID>
+                    <ToolTip>The name of the dependency property</ToolTip>
+                    <Default>PropName</Default>
+                </Literal>
+                <Literal>
+                    <ID>propertyType</ID>
+                    <ToolTip>The type of the dependency property</ToolTip>
+                    <Default>FrameworkElement</Default>
+                </Literal>
+                <Literal>
+                    <ID>defaultValue</ID>
+                    <ToolTip>The default value of the dependency property</ToolTip>
+                    <Default>null</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>classname</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Function>ClassName()</Function>
+                    <Default>ClassNamePlaceholder</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[//[TemplatePart(Name = $propertyName$Element, Type = typeof($propertyType$))]
+private const string $propertyName$Element = "$propertyName$";
+public static readonly DependencyProperty $propertyName$Property =
+DependencyProperty.Register($propertyName$Element, typeof($propertyType$), typeof($classname$), new PropertyMetadata($defaultValue$, new PropertyChangedCallback(On$propertyName$Changed)));
+
+public $propertyType$ $propertyName$
+{
+    get { return ($propertyType$)GetValue($propertyName$Property); }
+    set { SetValue($propertyName$Property, value); }
+}
+
+private static void On$propertyName$Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
+{}
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.IsTrue</Title>
+			<Shortcut>ait</Shortcut>
+			<Description>Asserts that a given expression is true</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<Default>expression</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.IsTrue($expression$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.IsFalse</Title>
+			<Shortcut>aif</Shortcut>
+			<Description>Asserts that a given expression is false</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<Default>expression</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.IsFalse($expression$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.IsNull</Title>
+			<Shortcut>ain</Shortcut>
+			<Description>Asserts that the given object or expression is null</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<Default>expression</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.IsNull($expression$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.IsNotNull</Title>
+			<Shortcut>ann</Shortcut>
+			<Description>Asserts that the given object or expression is not null</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>expression</ID>
+					<Default>expression</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.IsNotNull($expression$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.AreEqual</Title>
+			<Shortcut>aeq</Shortcut>
+			<Description>Asserts that two expression values are equal</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>val1</ID>
+					<Default>val1</Default>
+				</Literal>
+				<Literal>
+					<ID>val2</ID>
+					<Default>val2</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.AreEqual($val1$, $val2$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.AreNotEqual</Title>
+			<Shortcut>aneq</Shortcut>
+			<Description>Asserts that two expression values are not equal</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>val1</ID>
+					<Default>val1</Default>
+				</Literal>
+				<Literal>
+					<ID>val2</ID>
+					<Default>val2</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.AreNotEqual($val1$, $val2$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Assert.Contains</Title>
+			<Shortcut>acon</Shortcut>
+			<Description>Asserts that an object is contained within a given collection</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>object</ID>
+					<Default>object</Default>
+				</Literal>
+				<Literal>
+					<ID>collection</ID>
+					<Default>collection</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Assert.Contains($object$, $collection$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

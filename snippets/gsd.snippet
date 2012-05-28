@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Generic DeSerialize</Title>
+			<Shortcut>gsd</Shortcut>
+			<Description>Generic DeSerialize an object</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>path</ID>
+					<ToolTip>The path to the file to read</ToolTip>
+					<Default>path</Default>
+				</Literal>
+				<Literal>
+					<ID>obj</ID>
+					<ToolTip>The object to deserialize</ToolTip>
+					<Default>o</Default>
+				</Literal>
+
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Object o;
+	using(FileStream fs = new FileStream($path$, FileMode.Open, FileAccess.Read))
+	{
+		GenericSerializer gs = new GenericSerializer();
+		$obj$ = gs.Deserialize(fs);		
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

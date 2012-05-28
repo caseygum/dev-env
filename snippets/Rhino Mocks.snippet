@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock Repository</Title>
+			<Shortcut>mockery</Shortcut>
+			<Description>Code snippet to create a new MockRepository</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp"><![CDATA[MockRepository mockery = new MockRepository();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock - Regular</Title>
+			<Shortcut>cmock</Shortcut>
+			<Description>Code snippet to create a new Mock</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>interfaceName</ID>
+					<ToolTip>The name of the interface to mock</ToolTip>
+					<Default>IInterface</Default>
+				</Literal>
+				<Literal>
+					<ID>mockName</ID>
+					<ToolTip>The name of the mock variable</ToolTip>
+					<Default>mock</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$interfaceName$ $mockName$$end$ = mockery.CreateMock<$interfaceName$>();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock - Dynamic</Title>
+			<Shortcut>dmock</Shortcut>
+			<Description>Code snippet to create a new Dynamic Mock</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>interfaceName</ID>
+					<ToolTip>The name of the interface to mock</ToolTip>
+					<Default>IInterface</Default>
+				</Literal>
+				<Literal>
+					<ID>mockName</ID>
+					<ToolTip>The name of the mock variable</ToolTip>
+					<Default>mock</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$interfaceName$ $mockName$$end$ = mockery.DynamicMock<$interfaceName$>();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock - GenerateMock</Title>
+			<Shortcut>gmock</Shortcut>
+			<Description>Code snippet to generate a new Dynamic Mock using the AAA syntax</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>interfaceName</ID>
+					<ToolTip>The name of the interface to mock</ToolTip>
+					<Default>IInterface</Default>
+				</Literal>
+				<Literal>
+					<ID>mockName</ID>
+					<ToolTip>The name of the mock variable</ToolTip>
+					<Default>mock</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$interfaceName$ $mockName$$end$ = MockRepository.GenerateMock<$interfaceName$>();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock - GenerateStub</Title>
+			<Shortcut>gstub</Shortcut>
+			<Description>Code snippet to generate a new Stub using the AAA syntax</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>typeName</ID>
+					<ToolTip>The name of the type to stub</ToolTip>
+					<Default>TypeName</Default>
+				</Literal>
+				<Literal>
+					<ID>stubName</ID>
+					<ToolTip>The name of the stub variable</ToolTip>
+					<Default>stub</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$typeName$ $stubName$$end$ = MockRepository.GenerateStub<$typeName$>();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock - Parial</Title>
+			<Shortcut>pmock</Shortcut>
+			<Description>Code snippet to create a new Partial Mock</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>interfaceName</ID>
+					<ToolTip>The name of the interface to mock</ToolTip>
+					<Default>IInterface</Default>
+				</Literal>
+				<Literal>
+					<ID>mockName</ID>
+					<ToolTip>The name of the mock variable</ToolTip>
+					<Default>mock</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$interfaceName$ $mockName$$end$ = mockery.PartialMock<$interfaceName$>();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Mock Record/Playback</Title>
+			<Shortcut>rec</Shortcut>
+			<Description>Code snippet to create a new Mock Record/Playback blocks</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="csharp"><![CDATA[using(mockery.Record())
+            {
+              $end$
+            }
+
+            using(mockery.Playback())
+            {
+              
+            }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Expect.Call</Title>
+			<Shortcut>ec</Shortcut>
+			<Description>Expect a call on a mock object</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>call</ID>
+          <ToolTip>The method call expected on a mock object</ToolTip>
+					<Default>call</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Expect.Call($call$)$end$;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Expect.Call.Do</Title>
+			<Shortcut>ecdo</Shortcut>
+			<Description>Expect a call on a mock object with a Do call</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>call</ID>
+					<ToolTip>The method call expected on a mock object</ToolTip>
+					<Default>call</Default>
+				</Literal>
+        <Literal>
+					<ID>delegate</ID>
+					<ToolTip>The delegate type that matches the signature of the method call</ToolTip>
+					<Default>Delegate</Default>
+				</Literal>
+        <Literal>
+					<ID>delegateArgs</ID>
+					<ToolTip>The arguments for the delegate</ToolTip>
+					<Default>args</Default>
+				</Literal>
+        <Literal>
+					<ID>code</ID>
+					<ToolTip>The code for checking assertions on the method call</ToolTip>
+					<Default>return null;</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Expect.Call($call$).IgnoreArguments().Do(
+          ($delegate$)
+          (($delegateArgs$) =>
+          {
+            $code$$selected$$end$
+          }));]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>SetupResult.For</Title>
+			<Shortcut>srf</Shortcut>
+			<Description>Setup a result for a call on a mock object</Description>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>call</ID>
+          <ToolTip>The method call expected on a mock object</ToolTip>
+					<Default>call</Default>
+				</Literal>
+        <Literal>
+					<ID>returnValue</ID>
+          <ToolTip>The expected result for the call</ToolTip>
+					<Default>null</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[SetupResult.For($call$).Return($returnValue$)$end$;]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Generic Serialize Formatted</Title>
+			<Shortcut>gssf</Shortcut>
+			<Description>Generic Serialize an object with indentation format for easier readability</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>path</ID>
+					<ToolTip>The path to the file to write</ToolTip>
+					<Default>path</Default>
+				</Literal>
+				<Literal>
+					<ID>obj</ID>
+					<ToolTip>The object to serialize</ToolTip>
+					<Default>o</Default>
+				</Literal>
+
+			</Declarations>
+			<Code Language="csharp"><![CDATA[using(FileStream fs = new FileStream($path$, FileMode.Create, FileAccess.Write))
+	{
+		StreamWriter sw = new StreamWriter(fs);
+		XmlTextWriter xtr = new XmlTextWriter(sw);
+		xtr.Formatting = Formatting.Indented;
+		GenericSerializer gs = new GenericSerializer();
+		gs.Serialize(xtr, $obj$);		
+		xtr.Flush();
+		sw.Flush();
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

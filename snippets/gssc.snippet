@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Generic Serialize Compact</Title>
+			<Shortcut>gssc</Shortcut>
+			<Description>Generic Serialize an object in compact format (i.e. No linebreaks or indentation)</Description>
+			<Author>Casey Gum</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>path</ID>
+					<ToolTip>The path to the file to write</ToolTip>
+					<Default>path</Default>
+				</Literal>
+				<Literal>
+					<ID>obj</ID>
+					<ToolTip>The object to serialize</ToolTip>
+					<Default>o</Default>
+				</Literal>
+
+			</Declarations>
+			<Code Language="csharp"><![CDATA[using(FileStream fs = new FileStream($path$, FileMode.Create, FileAccess.Write))
+	{
+		GenericSerializer gs = new GenericSerializer();
+		gs.Serialize(fs, $obj$);		
+	}]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

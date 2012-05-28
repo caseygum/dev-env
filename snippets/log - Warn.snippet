@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Log - Warning</Title>
+			<Shortcut>logw</Shortcut>
+			<Description>Create a warning level log entry.</Description>
+			<Author>Adam Turner</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>The message to log</ToolTip>
+					<Default>message</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Log.Warn("$message$"$end$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Log - Warning Exception</Title>
+			<Shortcut>logw</Shortcut>
+			<Description>Create a warning level log entry.</Description>
+			<Author>Adam Turner</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>The message to log</ToolTip>
+					<Default>message</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Log.WarnException("$message$", ex);$end$]]></Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Log - Warning Exception Formatted</Title>
+			<Shortcut>logw</Shortcut>
+			<Description>Create a warning level log entry.</Description>
+			<Author>Adam Turner</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>The message to log</ToolTip>
+					<Default>message</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Log.WarnException(String.Format("$message$"$end$), ex);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
